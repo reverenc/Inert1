@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/backgrnd"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationActivity">
+<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:background="#DCFFFFFF"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_gravity="center">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/inert" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Create Account" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColorHint="#000"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:ems="10"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Password" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:textColor="#000"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Mobile"/>
+
+        <EditText
+            android:id="@+id/editTextSchool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="#000"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Emailid" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/buttonSignUp"
+            android:layout_marginTop="10dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rightarrow"/>
+    </LinearLayout>
+
+</LinearLayout>

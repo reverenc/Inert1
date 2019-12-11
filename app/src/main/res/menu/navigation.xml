@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home2"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_callslog"
+        android:icon="@drawable/misscall"
+        android:title="Call"/>
+
+    <item
+        android:id="@+id/navigation_quicknote"
+        android:icon="@drawable/quicknote"
+        android:title="Quick Note"/>
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/setting"
+        android:title="Setting"/>
+</menu>
