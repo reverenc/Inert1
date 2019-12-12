@@ -29,6 +29,7 @@
             android:layout_height="39dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="36dp"
+            android:visibility="gone"
             app:srcCompat="@drawable/fingerprint" />
 
         <TextView
@@ -36,7 +37,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
             android:layout_below="@+id/imageView"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -58,7 +60,7 @@
                 android:layout_margin="10dp"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="Mobile Number"
+                android:hint="Mobile"
                 android:textColor="#000" />
 
         </LinearLayout>
@@ -80,6 +82,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:ems="10"
+                android:inputType="textPassword"
                 android:gravity="center"
                 android:hint="Password"
                 android:textColor="#000" />
@@ -95,7 +98,7 @@
             android:text="Sign In" />
 
         <TextView
-            android:id="@+id/textViewLogin"
+            android:id="@+id/Create_new"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create new Account"></TextView>

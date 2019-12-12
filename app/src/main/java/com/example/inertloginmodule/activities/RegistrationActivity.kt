@@ -1,5 +1,6 @@
 package com.example.inertloginmodule.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -7,7 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.inertloginmodule.R
 import com.example.inertloginmodule.api.RetrofitClient
 import com.example.inertloginmodule.models.DefaultResponse
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_registration.*
+import kotlinx.android.synthetic.main.activity_registration.editTextEmail
+import kotlinx.android.synthetic.main.activity_registration.editTextPassword
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -65,6 +69,11 @@ class RegistrationActivity : AppCompatActivity() {
                         }
 
                     })
+
+            buttonSignUp.setOnClickListener{
+                intent = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(intent)
+            }
 
         }
     }

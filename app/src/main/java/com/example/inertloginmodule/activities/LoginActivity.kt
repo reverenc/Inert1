@@ -3,6 +3,7 @@ package com.example.inertloginmodule.activities
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.inertloginmodule.R
@@ -22,6 +23,11 @@ class LoginActivity : AppCompatActivity() {
 
         fblogin.setOnClickListener{
         intent = Intent(applicationContext, FbLoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        Create_new.setOnClickListener{
+            intent = Intent(applicationContext, RegistrationActivity::class.java)
             startActivity(intent)
         }
 
@@ -47,12 +53,21 @@ class LoginActivity : AppCompatActivity() {
                     .enqueue(object: Callback<LoginResponse> {
                         override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
                             Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
-                            Log.e("registrationAct", t.toString()); }
+                            Log.e("registrationAct", t.toString());
+                        }
 
                         override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                             Log.d("registrationAct-- ", response.body().toString());
                             Toast.makeText(applicationContext, response.body()?.msg, Toast.LENGTH_LONG).show()
-                        }              })
+                            val temp="Login successfully"
+                            val resTemp = response.body()?.msg.toString()
+                            if(temp.equals(resTemp))
+                            {
+                                intent = Intent(applicationContext, ProfileActivity::class.java)
+                                startActivity(intent)
+                            }
+                        }
+                    })
 
         }
     }
