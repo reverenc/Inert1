@@ -1,5 +1,6 @@
 package com.example.inertloginmodule.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -19,6 +20,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        fblogin.setOnClickListener{
+        intent = Intent(applicationContext, FbLoginActivity::class.java)
+            startActivity(intent)
+        }
 
         buttonLogin.setOnClickListener {
 
