@@ -1,5 +1,6 @@
 package com.example.kotlinfacebookloginwithtoken.api.service
 
+import com.example.inertloginmodule.models.LoginResponse
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Field
@@ -8,10 +9,10 @@ import retrofit2.http.POST
 
 interface MyApi {
     @FormUrlEncoded
-    @POST("loginToken.php")
+    @POST("loginToken.php/")
     fun insertdata(
-            @Field("emailid") email: String?,
-            @Field("token") token: String?,
-            @Field("alredayUser") alreadyUser:Boolean?
-    ): Call<ResponseBody?>?
+        @Field("emailid") email: String?,
+        @Field("token") token: String?,
+        @Field("alredayUser") alreadyUser:Boolean?
+    ): Call<LoginResponse>
 }

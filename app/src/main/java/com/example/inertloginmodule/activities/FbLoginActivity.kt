@@ -120,6 +120,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.inertloginmodule.R
+import com.example.inertloginmodule.models.LoginResponse
 import com.example.kotlinfacebookloginwithtoken.api.service.MyClient
 
 import com.facebook.AccessToken
@@ -223,17 +224,33 @@ class FbLoginActivity:AppCompatActivity() {
     }
 
     private fun insertData() {
-        val call: Call<ResponseBody?>? = MyClient.instance?.myApi?.insertdata(email,token, alreadyUser)
-        call?.enqueue(object:Callback<ResponseBody> {
-            override fun onResponse(call:Call<ResponseBody>, response:Response<ResponseBody>) {
-                Toast.makeText(this@FbLoginActivity, "Data inserted succesfully..", Toast.LENGTH_LONG).show()
-            }
+        /*    val call: Call<ResponseBody?>? = MyClient.instance?.insertdata(email,token, alreadyUser)
+            call?.enqueue(object:Callback<ResponseBody> {
+                override fun onResponse(call:Call<ResponseBody>, response:Response<ResponseBody>) {
+                    Log.d("tocheck1", response.body().toString());
+                    Toast.makeText(this@FbLoginActivity, "Data inserted succesfully..", Toast.LENGTH_LONG).show()
+                }
 
-            override fun onFailure(call:Call<ResponseBody>, t:Throwable) {
-                Toast.makeText(this@FbLoginActivity, "Data Failed", Toast.LENGTH_LONG).show()
-            }
-        })
+                override fun onFailure(call:Call<ResponseBody>, t:Throwable) {
+                    Log.e("tocheck2", t.toString());
+                    Toast.makeText(this@FbLoginActivity, "Data Failed", Toast.LENGTH_LONG).show()
+                }
+            })*/
+        var msg="this is insertion message"
+        Log.d("registrationAct",msg.toString());
+        MyClient.instance.insertdata(email,token,true)
+            .enqueue(object: Callback<LoginResponse> {
+                override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                    Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+                    Log.d("registrationAct", t.toString()); }
+
+                override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
+                    Log.d("registrationAct-- ", response.body().toString());
+                    Toast.makeText(applicationContext, response.body()?.msg, Toast.LENGTH_LONG).show()
+                }              })
+
     }
+
 
     companion object {
          var email: String? = null
