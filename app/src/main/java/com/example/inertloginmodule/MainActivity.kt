@@ -1,5 +1,6 @@
 package com.example.inertloginmodule
 
+import android.content.SharedPreferences
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +16,13 @@ class MainActivity : AppCompatActivity() {
             // Handler code here.
             val intent = Intent(this@MainActivity, InlineScanActivity::class.java)
             startActivity(intent);
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        fun saveLastUpdateTime(sp: SharedPreferences) {
+
         }
     }
 }
