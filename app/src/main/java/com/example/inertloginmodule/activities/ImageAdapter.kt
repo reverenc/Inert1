@@ -1,16 +1,18 @@
 package com.example.inertloginmodule.activities
 
 import android.content.Context
+import android.content.Intent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
+import androidx.core.content.ContextCompat.startActivity
 import com.example.inertloginmodule.R
 
 class ImageAdapter internal constructor(private val mContext: Context) : BaseAdapter() {
 
     // References to our images
-    private val mThumbIds = arrayOf(R.drawable.sample_0, R.drawable.sample_1, R.drawable.sample_2, R.drawable.sample_3, R.drawable.sample_4, R.drawable.sample_5, R.drawable.sample_6, R.drawable.sample_7)
+    private val mThumbIds = arrayOf(R.drawable.emergency, R.drawable.track, R.drawable.security, R.drawable.dearonce, R.drawable.weather, R.drawable.profile, R.drawable.battery, R.drawable.place)
 
     override fun getCount(): Int {
         return mThumbIds.size

@@ -11,7 +11,7 @@ class MyClient private constructor() {
     //     get() = retrofit.create(MyApi::class.java)
 
     companion object {
-        private const val BASE_URL = "http://192.168.1.4:8080/Inert/"
+        private const val BASE_URL = "http://192.168.0.4:8080/Inert/"
         private val AUTH = "Basic "+ Base64.encodeToString("sana".toByteArray(), Base64.NO_WRAP)
 
         private val logger: okhttp3.logging.HttpLoggingInterceptor
