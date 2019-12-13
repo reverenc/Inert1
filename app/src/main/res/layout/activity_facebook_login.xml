@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="70dp"
-        android:orientation="vertical">
+        android:background="#5631567E"
+        android:orientation="vertical"
+        android:padding="50dp">
 
         <ImageView
             android:id="@+id/profile_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal" />
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/facebook" />
 
         <TextView
             android:id="@+id/profile_name"
@@ -22,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="username"
+            android:text="Username"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -32,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="email"
+            android:text="Email"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -44,4 +48,4 @@
             android:layout_marginTop="25dp" />
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

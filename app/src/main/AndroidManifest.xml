@@ -5,50 +5,54 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/inert_logo"
+        android:usesCleartextTraffic="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".activities.UpdationActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity android:name=".activities.LoginActivity">
+
+        </activity>
+        <activity android:name=".activities.RegistrationActivity">
+
+        </activity>
+        <activity android:name=".activities.ProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.RegistrationActivity"></activity>
-        <activity android:name=".activities.ProfileActivity"></activity>
-        <activity android:name=".BarcodeMainActivity" />
-        <activity android:name=".InlineScanActivity" />
-        <activity android:name=".activities.FbLoginActivity" />
+        <activity android:name=".BarcodeMainActivity"></activity>
+        <activity android:name=".InlineScanActivity"></activity>
+        <activity android:name=".activities.UpdationActivity"></activity>
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
+        <activity android:name=".activities.FbLoginActivity"></activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
 
-        <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.VIEW" /> -->
-            <!-- &lt;!&ndash;                <category android:name="android.intent.category.DEFAULT" />&ndash;&gt; -->
-            <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
-            <!-- <data android:scheme="@string/fb_login_protocol_scheme" /> -->
-            <!-- </intent-filter> -->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--&lt;!&ndash;                <category android:name="android.intent.category.DEFAULT" />&ndash;&gt;-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                <data android:scheme="@string/fb_login_protocol_scheme" />-->
+<!--            </intent-filter>-->
         </activity>
     </application>
 

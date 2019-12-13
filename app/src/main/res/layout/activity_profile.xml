@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
     tools:context=".activities.ProfileActivity">
 
     <LinearLayout
@@ -11,9 +12,10 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-       <!-- <fragment
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></fragment>-->
+            android:layout_height="wrap_content"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -21,14 +23,17 @@
             android:id="@+id/StaticImageView"
             android:src="@drawable/static_image"></ImageView>
 
+    </LinearLayout>
         <GridView
             android:id="@+id/gridview"
+            android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:horizontalSpacing="@dimen/padding_default"
             android:numColumns="4"
             android:padding="@dimen/padding_default"
+            android:layout_marginBottom="50dp"
             android:verticalSpacing="@dimen/padding_default">
 
         </GridView>
@@ -37,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnClick"/>-->
-    </LinearLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"

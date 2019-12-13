@@ -12,13 +12,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import com.example.inertloginmodule.InlineScanActivity
 import com.example.inertloginmodule.R
-import kotlinx.android.synthetic.main.activity_profile.*
-
 
 class ProfileActivity : AppCompatActivity() {
 
     private val itemList: Array<String>
-        get() = arrayOf("Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8")
+        get() = arrayOf("Emergency","Tracking","Security","DearOnce","Weather","Profile","Battery","Places")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
@@ -38,9 +36,8 @@ class ProfileActivity : AppCompatActivity() {
 
 
         gridview.onItemClickListener = AdapterView.OnItemClickListener { parent, v, position, id ->
-           /* Toast.makeText(this@ProfileActivity, " Clicked Position: " + (position + 1),
-                Toast.LENGTH_SHORT).show()*/
-
+            Toast.makeText(this@ProfileActivity, " Clicked Position: " + (position + 1),
+                Toast.LENGTH_SHORT).show()
             if(position==0) {
                 intent = Intent(applicationContext, UpdationActivity::class.java)
                 startActivity(intent)

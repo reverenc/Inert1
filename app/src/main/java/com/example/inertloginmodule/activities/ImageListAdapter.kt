@@ -32,6 +32,7 @@ internal class ImageListAdapter internal constructor(context: Context, private v
         holder.name!!.text = this.itemList!![position]
         holder.icon!!.setImageResource(R.mipmap.ic_launcher)
 
+
         return convertView
     }
 

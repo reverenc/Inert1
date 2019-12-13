@@ -14,6 +14,10 @@ class ImageAdapter internal constructor(private val mContext: Context) : BaseAda
     // References to our images
     private val mThumbIds = arrayOf(R.drawable.emergency, R.drawable.track, R.drawable.security, R.drawable.dearonce, R.drawable.weather, R.drawable.profile, R.drawable.battery, R.drawable.place)
 
+
+   /* private val itemList: Array<String>
+        get() = arrayOf("Emergency","Tracking","Security","DearOnce","Weather","Profile","Battery","Places")*/
+
     override fun getCount(): Int {
         return mThumbIds.size
     }
