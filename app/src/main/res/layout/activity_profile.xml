@@ -13,8 +13,11 @@
         android:layout_height="wrap_content">
 
 
-        <ImageView
+        <TextView
             android:layout_width="match_parent"
+            android:text="Advertisement"
+            android:textSize="40dp"
+            android:gravity="center"
             android:layout_height="wrap_content"/>
 
         <ImageView
